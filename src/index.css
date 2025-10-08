@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* ---- TicTacToe fallback styles (se Tailwind não estiver aplicando) ---- */
+
+/* A grade 3x3 do tabuleiro */
+.grid.grid-cols-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 96px);
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Cada “quadradinho” (os botões) */
+.grid.grid-cols-3 button {
+  width: 96px;
+  height: 96px;
+  font-size: 32px;
+  font-weight: 700;
+  border-radius: 12px;
+  border: 1px solid #d1d5db; /* cinza claro */
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.grid.grid-cols-3 button:hover {
+  border-color: #9ca3af; /* cinza médio */
+}
+
+/* Só pra dar um respiro no status */
+.text-base, .md\:text-lg {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Espaçamentos mínimos dos botões "New Round" e "Full Reset" */
+.flex.gap-3 > button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+}
+.flex.gap-3 > button:first-child {
+  border-color: transparent;
+  background: #4f46e5; /* roxinho */
+  color: white;
+}
+.flex.gap-3 > button:first-child:hover {
+  background: #4338ca;
+}
